@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <h1>Page Visits</h1>
+    <h2 id="visits">0</h2>
+    <p>Times</p>
+
+
+
+ <script>
+    $.getJSON("https://api.countapi.xyz/hit/visits", function(response) {
+        $("#visits").text(response.value);
+    });
+ </script>
+</body>
+</html>
+
+<!--
+<h1>This Page Visits</h1>
+
+    <h3 id="cou">0</h3>
+    <p>Times</p>
+    <script>
+        const count1 = document.getElementById("cou");
+        countvisits();
+        function countvisits() {
+       
+        fetch('http://api.countapi.xyz/update/laptop/mouse/?amount=1')
+        .then((res) => res.json())
+        .then((res) => {
+            count1.innerHTML = res.value;
+        });
+
+        }
+    </script>
+    -->
